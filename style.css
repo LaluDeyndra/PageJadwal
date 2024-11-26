@@ -1,0 +1,318 @@
+/* Reset default padding and margin */
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: font;
+  src: url(./Host_Grotesk/HostGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: font;
+  text-transform: capitalize;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Memusatkan secara vertikal */
+  background: url(./img/5629296.jpg);
+  align-items: center;
+  padding-top: 150px;
+}
+
+nav {
+  position: relative; /* Tidak menempel di atas */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-200px);
+  border-radius: 10px; /* Membuat sudut membulat */
+  width: 100%;
+  padding-top: 22%;
+}
+
+.judul {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #fff; /* Warna teks tetap putih */
+  background-color: #6a5af9; /* Ubah background menjadi biru keunguan */
+  border-radius: 5px; /* Buat sudut sedikit melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+  transform: scale(1.05); /* Perbesar sedikit saat di-hover */
+  transition: all 0.3s ease; /* Transisi halus untuk semua efek */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.isi {
+  justify-content: center;
+  transform: translateY(-100%);
+  text-align: center;
+}
+
+.card-container {
+  display: flex; /* Flexbox untuk tata letak horizontal */
+  flex-wrap: wrap; /* Agar elemen berikutnya turun jika ruang tidak cukup */
+  gap: 15px; /* Jarak antar card */
+  margin-top: 20px;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+  transform: scale(1.05); /* Perbesar sedikit saat di-hover */
+  transition: all 0.3s ease; /* Transisi halus untuk semua efek */
+}
+
+.card-body {
+  padding: 15px;
+}
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.card-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+.card-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0; /* Atur ulang margin agar sesuai dengan layar kecil */
+    transform: none; /* Hapus transform agar navbar terlihat */
+    width: 100%;
+    justify-content: center;
+  }
+
+  body {
+    align-items: center;
+  }
+
+  .isi {
+    padding-left: 0; /* Hilangkan padding kiri pada layar kecil */
+    transform: none; /* Hapus transform agar konten tidak melayang */
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%; /* Buat card memenuhi 90% lebar layar */
+    margin: 10px auto; /* Tambahkan margin atas-bawah */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Jadikan vertikal */
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  img {
+    width: 300px;
+    padding-right: 25px;
+  }
+}
+
+footer {
+  padding: 10px 0;
+  text-align: center;
+  margin-top: auto; /* Memastikan footer di bagian bawah */
+}
+
+.schedule-container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  transform: translateY(-15%);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.day {
+  background: #f9fafc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 45%;
+  min-width: 200px;
+}
+
+.day h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 5px;
+}
+
+.day ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.day li {
+  background: #e8f8f5;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day li span {
+  font-weight: bold;
+  color: #16a085;
+}
+
+@media (max-width: 768px) {
+  .day {
+    width: 100%;
+  }
+
+  .schedule-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transform: translateY(-1%);
+  }
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.titlee {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.table thead th {
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #ecf0f1;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.table td:first-child {
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background: #d1ecf1;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+@media (max-width: 600px) {
+  .table td,
+  .table th {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
